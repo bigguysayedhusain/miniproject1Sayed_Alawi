@@ -15,8 +15,8 @@ try:
 except FileExistsError:
     pass
 
-for i in tickers:
-    data = (yf.Ticker(i)).history(period='10d')
+for ticker in tickers:
+    data = (yf.Ticker(ticker)).history(period='10d')
 
     closing_prices_list = []
 
@@ -28,13 +28,13 @@ for i in tickers:
     plt.plot(closing_prices_array)
     plt.xlabel('Days')
     plt.ylabel('Closing Price')
-    plt.title(f"{tickers} Closing Prices")
+    plt.title(f"{ticker} Closing Prices")
     plt.axis((1, 10, (min(closing_prices_list) - 2), max(closing_prices_list) + 2))
 
+    plt.savefig(f'charts/{ticker}.png')
+
     plt.show()
-    # print(closing_prices)
-    # min(closing_prices)
-    # max(closing_prices)
+
 
 # TODO delete Temp.py
 # TODO Don't forget to fulfill the requirements.txt
