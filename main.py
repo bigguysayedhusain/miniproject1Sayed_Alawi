@@ -24,16 +24,17 @@ for ticker in tickers:
 
     closing_prices_array = np.array(closing_prices_list)
 
-    plt.plot(closing_prices_array)
+    # plt.plot(closing_prices_array)
+    plt.plot([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], closing_prices_array)
     plt.xlabel('Last 10 Days')
+    plt.xticks(range(1, 11, 1))
     plt.ylabel('Closing Prices')
+    plt.grid(True)
     plt.title(f"{ticker} Closing Prices")
-    plt.axis((1, 10, (min(closing_prices_list) - 2), max(closing_prices_list) + 2))
+    plt.axis((0, 11, (min(closing_prices_list) - 2), max(closing_prices_list) + 2))
 
     plt.savefig(f'charts/{ticker}.png')
 
     plt.show()
 
-
 # TODO delete Temp.py
-# TODO Don't forget to finish the README.md
