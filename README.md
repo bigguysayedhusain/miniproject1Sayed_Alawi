@@ -14,7 +14,7 @@ This Python project fetches closing stock prices for the last 10 days for five t
 ### Install requirements with pip
 
 ```
-pip install -r requirements.txt
+pip install -r requirments.txt
 ```
 
 ### Executing program
