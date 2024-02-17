@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import yfinance as yf
 from pathlib import Path
 
-tickers = ['MSFT']  # TODO add 'TSLA', 'SONY', 'META', 'AAPL' back to tickers
+tickers = ['MSFT', 'CSCO', 'AMZN', 'GOOGL', 'SAP']
 
 try:
     Path('charts').mkdir()
@@ -24,7 +24,6 @@ for ticker in tickers:
 
     closing_prices_array = np.array(closing_prices_list)
 
-    # plt.plot(closing_prices_array)
     plt.plot([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], closing_prices_array)
     plt.xlabel('Last 10 Days')
     plt.xticks(range(1, 11, 1))
@@ -36,5 +35,3 @@ for ticker in tickers:
     plt.savefig(f'charts/{ticker}.png')
 
     plt.show()
-
-# TODO delete Temp.py
