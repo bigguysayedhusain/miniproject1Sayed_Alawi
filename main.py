@@ -36,5 +36,4 @@ for ticker in tickers:
 
 
 # TODO delete Temp.py
-# TODO Don't forget to fulfill the requirements.txt
 # TODO Don't forget to finish the README.md
