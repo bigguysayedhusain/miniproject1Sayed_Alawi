@@ -5,7 +5,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import yfinance as yf
-import copy
 from pathlib import Path
 
 tickers = ['MSFT']  # TODO add 'TSLA', 'SONY', 'META', 'AAPL' back to tickers
@@ -26,8 +25,8 @@ for ticker in tickers:
     closing_prices_array = np.array(closing_prices_list)
 
     plt.plot(closing_prices_array)
-    plt.xlabel('Days')
-    plt.ylabel('Closing Price')
+    plt.xlabel('Last 10 Days')
+    plt.ylabel('Closing Prices')
     plt.title(f"{ticker} Closing Prices")
     plt.axis((1, 10, (min(closing_prices_list) - 2), max(closing_prices_list) + 2))
 
